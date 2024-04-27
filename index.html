@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community-Driven VC</title>
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #8B5A2B; /* Primary brown */
+            color: black;
+        }
+
+        .section {
+            padding: 50px 20px;
+            background-color: #8B5A2B; /* Primary brown */
+            color: black; /* Ensure text color contrasts well */
+        }
+
+        .section.alt-background {
+            background-color: #9C6B37; /* Alternate brown */
+        }
+
+        header, footer, section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="black" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">Community-Driven VC</a>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons" style="color: white;">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#landing">Home</a></li>
+                <li><a href="accelerator.html">Accelerator</a></li>
+                <li><a href="investor.html">Investor Community</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="nav-mobile">
+        <li><a href="#landing">Home</a></li>
+        <li><a href="accelerator.html">Accelerator</a></li>
+        <li><a href="investor.html">Investor Community</a></li>
+    </ul>
+
+    <div class="content">
+        <section id="landing">
+            <h1>COMMUNERATE.vc</h1>
+            <p>Democratizing Venture Capital & Providing Startups with more than Capital - A Community</p>
+            <a href="accelerator.html" class="button">Accelerator Login</a>
+            <a href="investor.html" class="button">Investor Login</a>
+            <p>Communerate combines a Hybrid Accelerator with an online Community Investment Platform. Investments are standardized. Funds are pooled together in an SPV per community. Individual investments are capped at Xk per SPV for responsible investing.</p>
+        </section>
+    
+        <!-- Early Bird Subscriber Form -->
+        <section class="section">
+            <h3>Early Bird Subscriber</h3>
+            <p>Get notified on progress & opportunities before we go public.</p>
+            <form action="#" method="post"style="padding-left: 5%;padding-right: 5%;">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="button">Subscribe</button>
+            </form>
+        </section>
+    
+        <!-- Venture Capitalist Investment Form -->
+        <section class="section alt-background">
+            <h3>Venture Capitalist? Invest in the platform:</h3>
+            <form action="#" method="post" style="padding-left: 5%;padding-right: 5%;">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="button">Invest</button>
+            </form>
+        </section>
+    
+        <!-- Footer and Back to Top Button -->
+        <footer class="section">
+            <p>Contact us: <a href="mailto:info@communerate.vc" style="color:white">info@communerate.vc</a></p>
+            <a class="back-to-top" style="color:white;cursor:pointer" onclick="topFunction()" id="btnBackToTop">↑</a>
+        </footer>
+    </div>
+    
+    <!-- Materialize JavaScript for mobile responsiveness -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, {});
+        });
+    
+        // Functions for Back to Top button
+        var mybutton = document.getElementById("btnBackToTop");
+        window.onscroll = function() {scrollFunction()};
+    
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+    
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    
+</body>
+</html>
